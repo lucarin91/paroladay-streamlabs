@@ -30,7 +30,7 @@ xpath = '//p[contains(@class, "etimo")]'
 p = tree.xpath(xpath)
 etim = ''.join(p[0].itertext())
 
-res = u'La parola del giorno è {}. SIGN: {}. ETIM: {} (leggi di più a {})'.format(
+res = u'La parola del giorno è {}. SIGN: {}. ETIM: {} Leggi di più a {}.'.format(
         parola.upper(), sign, etim, href)
 print res
 
