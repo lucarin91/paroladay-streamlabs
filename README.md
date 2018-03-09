@@ -1,6 +1,6 @@
-# Parola of the day
+# !parola: Parola of the day
 
-A streamlabs chatbot command that retrieves and prints out the world of the day from [una parola al giorno](https://unaparolaalgiorno.it).
+A streamlabs chatbot command that retrieves and prints out the world of the day from [una parola al giorno](https://unaparolaalgiorno.it). The command it is only located in italian.
 
 Example:
 ```
@@ -12,13 +12,13 @@ Example:
 ```
 
 ## Installation
+First of all download the last version of the OwRank command from [here](https://github.com/lucarin91/paroladay-streamlabs/releases).
+After the download, open the Streamlab Chatbot program and under the script section, install the .zip file by clicking the import buttom.
 
-TBD
+After the installation, it is possible to configure the command using the UI interface in the script tab.
 
 ## Acknowledgement
-
-TBD
+The command use [una parola al giorno](https://unaparolaalgiorno.it) to get the word of the day.
 
 ## License
-
-MIT License
+MIT license
