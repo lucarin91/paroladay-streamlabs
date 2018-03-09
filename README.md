@@ -1,6 +1,6 @@
 # !parola: Parola of the day
 
-A streamlabs chatbot command that retrieves and prints out the world of the day from [una parola al giorno](https://unaparolaalgiorno.it). The command it is only located in italian.
+A streamlabs chatbot command that retrieves and prints out the world of the day from [una parola al giorno](https://unaparolaalgiorno.it). The command is only located in Italian.
 
 Example:
 ```
