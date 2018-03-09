@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Retrieve and parse the word of the day from https://unaparolaalgiorno.it
+Retrieve and parse the word of the day from https://unaparolaalgiorno.it.
+This version of the script use xPath.
 """
 
 import urllib2
 import json
-from lxml import etree
+from lxml import html
 
 URL = 'https://unaparolaalgiorno.it'
 res = urllib2.urlopen(URL)
@@ -15,7 +16,7 @@ if not data_raw:
     print 'server error'
     exit()
 
-tree = etree.HTML(data_raw)
+tree = html.fromstring(data_raw)
 
 xpath = '//h2[contains(@class, "parola")]/a'
 a = tree.xpath(xpath)
