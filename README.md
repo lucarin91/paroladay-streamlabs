@@ -1,6 +1,6 @@
 # !parola: Parola of the day
 
-A streamlabs chatbot command that retrieves and prints out the word of the day from [una parola al giorno](https://unaparolaalgiorno.it). The command is only located in Italian.
+A *Streamlabs Chatbot* command that retrieves and prints out the word of the day from [una parola al giorno](https://unaparolaalgiorno.it). The command is only located in Italian.
 
 Example:
 ```
@@ -13,7 +13,7 @@ Example:
 
 ## Installation
 First of all download the last version of the *ParolaDay* command from [here](https://github.com/lucarin91/paroladay-streamlabs/releases).
-After the download, open the *Streamlab Chatbot* program and under the script section, install the .zip file by clicking the import buttom.
+After the download, open the *Streamlab Chatbot* program and under the script section, install the `.zip` file by clicking the import buttom.
 
 After the installation, it is possible to configure the command using the UI interface in the script tab.
 
