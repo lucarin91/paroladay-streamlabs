@@ -19,7 +19,7 @@ ScriptName = "ParolaDay"
 Website = "https://github.com/lucarin91/parola_streamlabs"
 Description = "Return the world of the day."
 Creator = "lucarin91"
-Version = "1.0.0"
+Version = "1.0.1"
 
 #---------------------------------------
 # Set Variables
@@ -123,4 +123,3 @@ def ShowParola():
     Parent.Log(ScriptName, 'Send rank to chat!')
     responce = get_parola()
     Parent.SendTwitchMessage(responce)
-    
