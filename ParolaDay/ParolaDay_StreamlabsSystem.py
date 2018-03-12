@@ -2,15 +2,17 @@
 #---------------------------------------
 # Import Libraries
 #---------------------------------------
-import sys
+import datetime
 import io
 import json
 import re
+import sys
+from datetime import date
 from os.path import isfile
+
 import clr
 clr.AddReference("IronPython.SQLite.dll")
 clr.AddReference("IronPython.Modules.dll")
-import datetime
 
 #---------------------------------------
 # [Required] Script Information
@@ -19,7 +21,7 @@ ScriptName = "ParolaDay"
 Website = "https://github.com/lucarin91/parola_streamlabs"
 Description = "Return the world of the day."
 Creator = "lucarin91"
-Version = "1.0.1"
+Version = "1.1.0"
 
 #---------------------------------------
 # Set Variables
@@ -34,6 +36,8 @@ _re_parola = None
 _re_sign = None
 _re_etim = None
 _re_cleanr =  None
+_responce = None
+_date = None
 
 #---------------------------------------
 # [Required] Intialize Data (Only called on Load)
@@ -54,8 +58,8 @@ def Init():
             conf = json.loads(string)
             parse_conf(conf)
 
-    
-    
+    update_cache()
+
 #---------------------------------------
 # [Required] Execute Data / Process Messages
 #---------------------------------------
@@ -83,7 +87,19 @@ def ReloadSettings(jsonData):
 # My functions
 #---------------------------------------
 def get_parola():
-    """Return the parola of the day."""
+    """Get parola of the day from cache or from the server."""
+    if _date < date.today():
+        update_cache()
+    return _responce
+
+def update_cache():
+    """Update the internal cache."""
+    global _responce, _date
+    _responce = request_parola()
+    _date = date.today()
+
+def request_parola():
+    """Request the parola of the day from the server."""
     url = 'http://unaparolaalgiorno.it'
     res_raw = Parent.GetRequest(url, {})
     res = json.loads(res_raw)
