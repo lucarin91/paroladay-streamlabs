@@ -41,7 +41,7 @@ _re_cleanr =  None
 def Init():
     global _re_parola, _re_sign, _re_etim, _re_cleanr
     # build regex
-    _re_parola = re.compile(r'<a href="(/significato/P/([A-z]*))"')
+    _re_parola = re.compile(r'<a href="(/significato/[A-Z]/([A-z]*))"')
     _re_sign = re.compile(r'Sign</span>(.*)</p>')
     _re_etim = re.compile(r'<p class="etimo">(.*)</p>')
     _re_cleanr = re.compile(r'<.*?>')

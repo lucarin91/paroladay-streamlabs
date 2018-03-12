@@ -30,7 +30,7 @@ data_raw = unicode(data_raw, "utf-8")
     <span id="word_day">è la parola del giorno</span>
 </h2>
 '''
-reg = '<a href="(/significato/P/([A-z]*))"'
+reg = '<a href="(/significato/[A-Z]/([A-z]*))"'
 f = re.findall(reg, data_raw)[0]
 href = URL + f[0]
 parola = f[1][0].upper() + f[1][1:]
